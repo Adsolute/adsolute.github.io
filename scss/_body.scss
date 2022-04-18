@@ -11,3 +11,29 @@
 // ------------------------------------- //
 // ------------------------------------- //
 // ------------------------------------- //
+$bgc: #ffffff;
+$tc: #22252e;
+$cwidht: 1620px;
+// $cwidhtmin: 800px;
+
+body {
+	font-family: Roboto;
+	font-size: 14px;
+	color: $tc;
+	background-color: $bgc;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+[class*="__container"] {
+	width: $cwidht;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.main {
+	flex: 1 1 auto;
+}
