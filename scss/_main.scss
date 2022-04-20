@@ -23,38 +23,80 @@
 		min-height: 100px;
 		justify-content: center;
 		align-items: center;
+		// position: relative;
+		// overflow: hidden;
 	}
 
 	&__icon {
+		flex: 1 1 auto;
+	}
+	&__icon img {
+		padding: 5px;
+		min-width: 170px;
+		@media (max-width: 500px) {
+			max-width: 170px;
+			text-align: right;
+		}
 	}
 
 	&__menu {
-		flex: 0 1 auto;
+		flex: 1 1 auto;
 		margin: 0 auto;
 		flex-wrap: wrap;
+		@media (max-width: 500px) {
+			position: absolute;
+			left: -200%;
+			// top: 0;
+		}
+		//-------------------//
+		display: block;
+		position: absolute;
+		// visibility: hidden;
+		top: 0;
+		left: -100%;
+
+		height: 100%;
+
+		margin: 0;
+		padding: 80px 0;
+
+		list-style: none;
+		text-align: center;
+
+		background-color: #eceff1;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+		//-------------------//
 	}
 
 	&__button {
 		display: flex;
+		flex: 0 0 auto;
+		justify-content: space-between;
+		overflow: hidden;
 	}
 }
 .menu {
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__item {
+		display: block;
+		padding: 12px 24px;
+
 		flex: 0 0 auto;
 		display: flex;
 		align-items: center;
+		border-top: 3px solid transparent;
 		border-bottom: 3px solid transparent;
 	}
 	&__item:not(:last-child) {
 		margin-right: 50px;
-		@media (max-width: 1100px) {
-			margin-right: 15px;
-		}
 	}
 	&__item:hover {
 		border-color: #4cb649;
@@ -70,42 +112,99 @@
 		line-height: 1.3;
 		letter-spacing: 2px;
 		padding: 5px;
-		@media (max-width: 1100px) {
-			padding: 3px;
-		}
 	}
 
 	&__icon {
-		// position: absolute;
 		width: 0;
 		height: 0;
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
 		border-top: 5px solid #323642;
-		// left: 100%;
-		// top: 0;
 	}
 }
+//------------------------------------------------------------------//
 .button {
 	flex: 1 0 auto;
 	background: #4cb649;
 	border: 1px solid #4cb649;
-	border-radius: 20px;
+	border-radius: 22px;
 	color: #ffffff;
+	margin-right: 5px;
+	@media (max-width: 500px) {
+		justify-self: end;
+	}
 	&__link {
 	}
 	& a {
 		line-height: 18px;
-		padding: 10px 20px;
+		padding: 15px 13px;
 		display: block;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		text-decoration: uppercase;
+		@media (max-width: 800px) {
+			max-width: 126px;
+		}
 	}
 }
-.button:not(:last-child) {
-	margin-right: 10px;
+.button:last-child {
+	margin-right: 0px;
+	margin-left: 5px;
 }
 .button-white {
 	background-color: #ffffff;
 	color: #4cb649;
+	@media (max-width: 1100px) {
+		display: none;
+	}
+}
+//------------------------------------------------------------------//
+.menu__button {
+	display: flex; /* используем flex для центрирования содержимого */
+	align-items: center; /* центрируем содержимое кнопки */
+	position: fixed;
+	top: 20px;
+	left: 20px;
+
+	width: 26px;
+	height: 26px;
+
+	cursor: pointer;
+	z-index: 1;
+}
+.menu-hamburger__button {
+	order: -1;
+}
+.menu__button > span,
+.menu__button > span::before,
+.menu__button > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #616161;
+}
+.menu__button > span::before {
+	content: "";
+	top: -8px;
+}
+.menu__button > span::after {
+	content: "";
+	top: 8px;
+}
+
+//----------------------------//
+.menu__toggle:checked ~ .menu__button > span {
+	transform: rotate(45deg);
+}
+.menu__toggle:checked ~ .menu__button > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+.menu__toggle:checked ~ .menu__button > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+.menu__toggle:checked ~ .header__menu {
+	visibility: visible;
+	left: 0;
 }
