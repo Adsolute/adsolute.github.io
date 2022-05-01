@@ -867,3 +867,275 @@ body._lock {
   border-radius: 50%;
   background-color: #46b843;
 }
+
+.main-signup {
+  background-color: #3d4251;
+}
+.main-signup__container {
+  width: 1230px;
+  height: 100%;
+  max-width: 100%;
+}
+.main-signup__body {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-signup__title {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 64px;
+  margin: 105px 0px 50px 0px;
+  color: #ffffff;
+}
+.main-signup__subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+.main-signup__ways-to-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.main-signup__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4cb649;
+  margin-bottom: 50px;
+}
+.main-signup__buttons button {
+  background-color: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+.main-signup__buttons button:first-child {
+  margin-right: 40px;
+}
+.main-signup__button-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+}
+.main-signup__button-inner:hover .main-signup__button-arrow::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -50%;
+}
+.main-signup__button-inner:hover .main-signup__button-arrow::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -50%;
+}
+.main-signup__button-arrow {
+  position: relative;
+  overflow: hidden;
+  width: 15px;
+  height: 10px;
+  display: block;
+  margin-left: 10px;
+  content: "";
+}
+.main-signup__button-arrow::before, .main-signup__button-arrow::after, .main-signup__button-arrow span {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #4cb649;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.main-signup__button-arrow::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 50%;
+}
+.main-signup__button-arrow::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 50%;
+}
+.main-signup__button-arrow:hover::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -50%;
+}
+.main-signup__button-arrow:hover::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -50%;
+}
+
+.subscription__body {
+  max-width: 380px;
+  background-color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+.subscription__item {
+  max-width: 205px;
+  width: 100%;
+  margin: 60px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subscription__title {
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.subscription__title:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  border-bottom: solid 2px #4cb649;
+}
+.subscription__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 56px;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.subscription__price::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: solid 1px #ebeced;
+}
+.subscription__benefit {
+  text-align: center;
+  line-height: 22px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-bottom: 24px;
+}
+.subscription__benefit span {
+  color: red;
+  margin-right: 11px;
+}
+.subscription__button {
+  border-radius: 900px;
+  border: #46b843 1px solid;
+}
+.subscription__link {
+  display: block;
+  line-height: 18px;
+  letter-spacing: 2px;
+  padding: 10.5px 20px;
+}
+
+.price__currency {
+  font-size: 24px;
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+.price__value {
+  margin: 0 8px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.price__timeperiod {
+  font-size: 24px;
+  line-height: 32px;
+}
+.price__timeperiod::before {
+  content: "/";
+}
+
+.ways-to-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ways-to-pay__title {
+  color: #fff;
+  margin-right: 30px;
+}
+.ways-to-pay__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ways-to-pay__link:not(:last-child) {
+  margin-right: 35px;
+}
+.ways-to-pay__image img {
+  width: 100%;
+}

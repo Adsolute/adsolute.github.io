@@ -728,3 +728,276 @@ body {
 		}
 	}
 }
+
+// ------------------------------------------- //
+
+.main-signup {
+	background-color: #3d4251;
+
+	&__container {
+		width: 1230px;
+		height: 100%;
+		max-width: 100%;
+	}
+
+	&__body {
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: 300;
+		line-height: 64px;
+
+		margin: 105px 0px 50px 0px;
+
+		color: #ffffff;
+	}
+
+	&__subscription {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	&__ways-to-pay {
+		display: flex;
+		margin-bottom: 15px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		color: #4cb649;
+		margin-bottom: 50px;
+		& button {
+			background-color: inherit;
+			color: inherit;
+			text-transform: uppercase;
+			line-height: 18px;
+
+			&:first-child {
+				margin-right: 40px;
+			}
+		}
+	}
+	&__button-inner {
+		display: flex;
+		align-items: center;
+		padding: 2px;
+		&:hover .main-signup__button-arrow::after {
+			transform: rotate(-45deg);
+			left: -50%;
+		}
+		&:hover .main-signup__button-arrow::before {
+			transform: rotate(45deg);
+			left: -50%;
+		}
+	}
+
+	&__button-how {
+	}
+
+	&__button-redeem {
+	}
+	&__button-arrow {
+		position: relative;
+
+		overflow: hidden;
+
+		width: 15px;
+		height: 10px;
+
+		// width: 50px;
+		// height: 50px;
+
+		display: block;
+		margin-left: 10px;
+		content: "";
+		&::before,
+		&::after,
+		& span {
+			content: "";
+
+			display: block;
+			position: absolute;
+
+			background-color: #4cb649;
+			// border-top: solid 1px #4cb649;
+			height: 1px;
+			top: 50%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			transform: translateY(-50%);
+
+			transition: all 0.3s linear;
+		}
+		& span {
+		}
+		&::before {
+			transform: rotate(-45deg);
+			left: 50%;
+		}
+		&::after {
+			transform: rotate(45deg);
+			left: 50%;
+		}
+		&:hover {
+			&::after {
+				transform: rotate(-45deg);
+				left: -50%;
+			}
+		}
+		&:hover {
+			&::before {
+				transform: rotate(45deg);
+				left: -50%;
+			}
+		}
+	}
+}
+.subscription {
+	&__body {
+		max-width: 380px;
+		// max-height: 340px;
+		// padding: 60px 85px;
+		background-color: #fff;
+		flex: 1 1 auto;
+		border-radius: 10px;
+		display: flex;
+		// align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		// text-align: center;
+		max-width: 205px;
+		width: 100%;
+		// height: 100%;
+		// padding: 0 auto;
+		margin: 60px 0px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		line-height: 18px;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		position: relative;
+
+		padding-bottom: 8px;
+
+		margin-bottom: 20px;
+		&:after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 15%;
+			right: 15%;
+			border-bottom: solid 2px #4cb649;
+		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: baseline;
+
+		font-size: 56px;
+		font-weight: 400;
+
+		position: relative;
+
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		&::after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			content: "";
+			border-bottom: solid 1px #ebeced;
+		}
+	}
+
+	&__benefit {
+		text-align: center;
+
+		line-height: 22px;
+		flex: 1 1 auto;
+
+		margin-bottom: 24px;
+
+		& span {
+			color: red;
+			margin-right: 11px;
+		}
+	}
+
+	&__button {
+		border-radius: 900px;
+		border: #46b843 1px solid;
+	}
+
+	&__link {
+		display: block;
+		line-height: 18px;
+
+		letter-spacing: 2px;
+		padding: 10.5px 20px;
+	}
+}
+.price {
+	&__currency {
+		font-size: 24px;
+
+		align-self: start;
+	}
+
+	&__value {
+		margin: 0 8px;
+		flex: 1 1 auto;
+	}
+
+	&__timeperiod {
+		font-size: 24px;
+		line-height: 32px;
+		&::before {
+			content: "/";
+		}
+	}
+}
+.ways-to-pay {
+	display: flex;
+	align-items: center;
+	&__title {
+		color: #fff;
+		margin-right: 30px;
+	}
+	&__items {
+		display: flex;
+		align-items: center;
+	}
+	&__link {
+		// margin-right: 35px;
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+	}
+	&__image {
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+// ------------------------------------------- //
