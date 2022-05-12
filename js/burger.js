@@ -35,22 +35,30 @@ if (iconMenu) {
 
 const menuLinks = document.querySelectorAll('.menu__item');
 const subMenus = document.querySelectorAll('.submenu')
+let twen;
 
 menuLinks.forEach(item => {
 
 	item.addEventListener('click', function () {
 		console.log('1')
+		twen = this.querySelector('._visible')
 
+		if (twen) {
+			twen.classList.remove('_visible')
+			return;
+		}
 		subMenus.forEach(e => {
 			e.classList.remove('_visible')
-			console.log('1submenus each')
+			console.log('submenus each')
 
 		});
 
 		let subMenu = this.querySelector('.submenu');
 
 		console.log(subMenu)
+		if (subMenu) {
 
+		}
 		subMenu.classList.add('_visible');
 
 	})
