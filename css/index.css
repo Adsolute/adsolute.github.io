@@ -350,8 +350,12 @@ body._lock {
     width: 100%;
     background: #fff;
     z-index: 30;
+    left: -100%;
   }
   .menu__body._active {
+    left: 0;
+  }
+  .menu__body._active::before {
     left: 0;
   }
 }

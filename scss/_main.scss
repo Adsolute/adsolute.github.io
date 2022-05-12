@@ -233,9 +233,15 @@ body {
 				width: 100%;
 				background: #fff;
 				z-index: 30;
+				left: -100%;
+				&._active {
+				}
 			}
 
 			&._active {
+				&::before {
+					left: 0;
+				}
 				left: 0;
 			}
 		}
