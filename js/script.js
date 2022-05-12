@@ -1,5 +1,6 @@
 const menuItems = document.getElementsByClassName(".menu__link");
 
+
 var onClick = function (event) {
 	event.preventDefault();
 
@@ -13,3 +14,8 @@ var onClick = function (event) {
 for (let i = 0; i < menuItems.length; i++) {
 	menuItems[i].addEventListener('click', onClick, false)
 }
+// --------------------------------------------------- //
+
+
+
+

@@ -18,18 +18,19 @@
 }
 
 a {
-	outline: none;
+	// outline: none;
 	text-decoration: none;
+	// color: black;
 	color: inherit;
 }
 
 a:focus,
 a:active,
-a:hover,
-a:visited {
+a:visited,
+a:hover {
 	outline: none;
 	text-decoration: none;
-	color: inherit;
+	// color: inherit;
 }
 
 nav,
